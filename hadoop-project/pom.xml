@@ -381,6 +381,12 @@
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-aliyun</artifactId>
+        <version>2.9.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-kms</artifactId>
         <version>${project.version}</version>
         <classifier>classes</classifier>
@@ -943,7 +949,22 @@
         <artifactId>azure-storage</artifactId>
         <version>2.0.0</version>
     </dependency>
-      
+    <dependency>
+        <groupId>com.aliyun.oss</groupId>
+        <artifactId>aliyun-sdk-oss</artifactId>
+        <version>2.3.0</version>
+        <exclusions>
+            <exclusion>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>3.4.1</version>
+    </dependency>
     </dependencies>
   </dependencyManagement>
 
